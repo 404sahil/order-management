@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: order
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+jwt:
+  secret: mySecretKey1234567890123456789012345678901234567890
+  expiration: 86400000
+
+order:
+  file:
+    input:
+      path: input/orders
+    error:
+      path: error/orders
+    poll:
+      interval: 5000
